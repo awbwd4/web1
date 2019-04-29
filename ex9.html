@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>function</h1>
+    <ul>
+      <script type="text/javascript">
+        function two(){
+          document.write('<li>2-1</li>');
+          document.write('<li>2-2</li>');
+        }
+
+        document.write('<li>1</li>');
+        two();
+        document.write('<li>3</li>');
+        two();
+      </script>
+    </ul>
+    <h2>Parameter & Argument</h2>
+    <script type="text/javascript">
+
+      function sum(a,b){
+        document.write(a+b+'<br>');
+      }
+
+      sum(2,6);
+      sum(5,7);
+    </script>
+    <br>
+
+    <script type="text/javascript">
+
+      function sumColorRed(a,b){
+        document.write('<div style="color:red">'+a+b+'</div><br>');
+      }
+      sumColorRed(2,6);
+      sumColorRed(5,7);
+
+    </script>
+
+    <h3>Return</h3>
+
+    <script type="text/javascript">
+
+      function sum2(a,b){
+        return a+b;
+      }
+
+      document.write(sum2(2,3)+'<br>');
+      document.write('<div style="color:red">'+sum2(2,3)+'</div>');
+      document.write('<div style="font-size:3rem">'+sum2(2,3)+'</div>');
+
+    </script>
+
+
+
+
+
+  </body>
+</html>
