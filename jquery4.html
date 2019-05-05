@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <ul>
+      <li>test2</li>
+    </ul>
+    <ul class="foo">
+      <li>test</li>
+    </ul>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        $('ul.foo').click( function(){
+            $('li', this).css('backgroundColor', 'red');
+        })
+    </script>
+    <script type="text/javascript">
+      $(document.body).css("backgroundColor", "black");
+      $(document.body).css("color", "white");
+    </script>
+
+
+
+
+  </body>
+</html>

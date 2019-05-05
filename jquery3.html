@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+
+
+
+    <!-- <script type="text/javascript">
+      $('#navigation li').live('click', function() {
+        $('#navigation li').removeClass('selected');
+        $(this).addClass('selected');
+      })
+    </script> -->
+
+    <style type="text/css">
+               #navigation li {
+                   list-style:none;
+                   float:left;
+                   padding:5px;
+               }
+               #navigation {
+                   cursor:pointer;
+               }
+               #navigation .selected {
+                   background-color:red;
+                   color:white;
+               }
+           </style>
+
+  </head>
+  <body>
+    <ul id="navigation">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>javascript</li>
+          <li class="selected">jQuery</li>
+          <li>PHP</li>
+          <li>mysql</li>
+      </ul>
+
+
+(function($){
+
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+      <script type="text/javascript">
+                $('#navigation li').on('click', function() {
+                    $('#navigation li').removeClass('selected');
+                    $(this).addClass('selected');
+                })
+            </script>
+
+          }
+            )(jQuery)
+
+
+
+
+
+  </body>
+</html>

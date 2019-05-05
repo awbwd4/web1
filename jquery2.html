@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <script type="text/javascript">
+               function addEvent(target, eventType,eventHandler, useCapture) {
+                   if (target.addEventListener) { // W3C DOM
+                       target.addEventListener(eventType,eventHandler,useCapture?useCapture:false);
+                   } else if (target.attachEvent) {  // IE DOM
+                       var r = target.attachEvent("on"+eventType, eventHandler);
+                   }
+               }
+
+
+               function clickHandler(event) {
+                   var nav = document.getElementById('navigation');
+                   for(var i = 0; i < nav.childNodes.length; i++) {
+                       var child = nav.childNodes[i];
+                       if(child.nodeType==3)
+                           continue;
+                       child.className = '';
+                   }
+                   event.target.className = 'selected';
+               }
+
+               addEvent(window, 'load', function(eventObj) {
+                   var nav = document.getElementById('navigation');
+                   for(var i = 0; i < nav.childNodes.length; i++) {
+                       var child = nav.childNodes[i];
+                       if(child.nodeType==3)
+                           continue;
+                       addEvent(child, 'click', clickHandler);
+                   }
+               })
+           </script>
+<!--
+    <script type="text/javascript">
+
+      function addEvent(target, eventType, eventHandler, useCapture) {
+        if (target.addEventListner){
+          target.addEventListner(eventType, eventHandler,useCapture?useCapture:false);
+        }else if(target.attachEvent){
+          var r = target.attachEvent("on"+eventType, eventHandler);
+        }
+      }
+
+      function clickHandler(event) {
+        var nav = document.getElementById('navigation');
+        for(var i = 0; i < nav.childNodes.length; i++){
+          var child = nav.childNodes[i];
+          if(child.nodeType==3)
+                continue;
+          child.className = '';
+        }
+        event.target.className = 'selected';
+      }
+
+      addEvent(window, 'load', function(eventObj) {
+
+        var nav = document.getElementById('navigation');
+        for (var i = 0; i < nav.childNodes.length; i++) {
+          var child = nav.childNodes[i];
+          if (child.nodeType==3)   continue;
+          addEven (child, 'click', clickHandler);
+        }
+      })
+
+    </script> -->
+
+
+
+
+
+    <style type="text/css">
+      #navigation li{
+        list-style:none;
+        float:left;
+        padding:5px
+      }
+
+      #navigation{
+        cursor:pointer;
+      }
+
+      #navigation .selected{
+        background-color : red;
+        color : white;
+      }
+    </style>
+  </head>
+  <body>
+
+    <ul id="navigation">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li class="selected">javascript</li>
+      <li>PHP</li>
+      <li>mysql</li>
+    </ul>
+
+
+
+
+  </body>
+</html>
