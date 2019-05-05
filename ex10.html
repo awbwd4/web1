@@ -14,6 +14,7 @@
       var coworkers = {
         "programmer" : "egoing",
         "designer" : "leezche"
+        //객체에 소속된 변수들 Property
       };
 
       document.write("programmer : "+coworkers.programmer+"<br>");
@@ -22,6 +23,24 @@
       document.write("bookkeeper"+coworkers.bookkeeper+"<br>");
       coworkers["data scientist"] = "taeho";
       document.write("data scientist : "+coworkers["data scientist"]+"<br>");
+    </script>
+
+    <h2>Iterate</h2>
+
+    <script type="text/javascript">
+
+    </script>
+
+    <h2>Property & Method</h2>
+    <script type="text/javascript">
+
+      coworkers.showAll = function(){
+        for(var key in this){
+          document.write(key+" : "+this[key]+"<br>");
+        }
+      }
+
+      coworkers.showAll();
 
     </script>
 
