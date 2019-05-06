@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+      <style>
+        p {
+                margin: 4px;
+                font-size:16px;
+                font-weight:bolder;
+                cursor:pointer;
+        }
+
+        .blue{
+          color : blue;
+        }
+
+        .highlight {
+          background: yellow;
+        }
+      </style>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  </head>
+  <body>
+      <!-- .addClass() : 클래스를 추가해줌
+      .hasClass() : 어떤 엘리먼트에 클래스를 가지고 있는지를 체크
+      .removeClass() : 해당 클래스 삭제
+      .toggleClass() : 클래스가 존재하면 삭제, 없으면 추가해줌 -->
+
+              <p class="blue"> Click to toggle </p>
+              <p class="blue highlight"> highlight </p>
+              <p class="blue"> on these </p>
+              <p class="blue"> paragraphs </p>
+
+          <script type="text/javascript">
+            $("p").click( function(){
+              $(this).toggleClass("highlight");
+            });
+          </script>
+
+
+
+  </body>
+</html>

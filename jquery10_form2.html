@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+          <style>
+               p {
+                   margin:0;
+                   color:blue;
+               }
+               div, p {
+                   margin-left:10px;
+               }
+               span {
+                   color:red;
+               }
+           </style>
+           <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+
+  </head>
+  <body>
+    <p>
+      correct
+    </p>
+    <form class="" action="javascript:alert('success!!');">
+
+      <div>
+        <input type="text"/>
+        <input type="submit" name="" value="submit">
+      </div>
+
+      <span></span>
+
+      <script type="text/javascript">
+        $('form').submit(function(){
+
+          if ($("input:first").val() == "correct") {
+            $("span").text("validated").show();
+            return true;
+          }else{
+            $("span").text("not valid").show().fadeOut(1000);
+            return false;
+          }
+
+        });
+      </script>
+
+
+    </form>
+
+
+
+
+
+  </body>
+</html>

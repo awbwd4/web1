@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+      <style>
+        p {
+            color:blue;
+                 margin:8px;
+        }
+      </style>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  </head>
+  <body>
+        <input type="text" name="" value="some text"/>
+        <p>
+        </p>
+
+        <script type="text/javascript">
+          $("input").keyup(
+            //keyup : 타이핑을 하고 그 타이핑을 땠을 때 발생하는 이벤트
+            function(){
+              var value = $(this).val();
+              //이벤트가 발생한 엘리멘트의 value값을 변수에 저장
+              $("p").text(value);
+            }).keyup();//마지막 keyup : 트리거
+            
+        </script>
+
+
+
+
+  </body>
+</html>

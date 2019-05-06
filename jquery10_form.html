@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+        <style media="screen">
+          span {
+
+          }
+        </style>
+       <script src="http://code.jquery.com/jquery-latest.js"></script>
+  </head>
+  <body>
+
+    <p>
+      <input type="text"/>
+      <span></span>
+    </p>
+
+      <script type="text/javascript">
+        $('input').focus( function(){
+          $(this).next('span').html('focus');
+        }).blur(function(){
+          $(this).next('span').html('blur');
+        }).change(function(){
+          alert('change!! '+$(this).val());
+        }).select(function(){
+          $(this).next('span').html('select');
+        })
+      </script>
+
+
+
+  </body>
+</html>

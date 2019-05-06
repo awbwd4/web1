@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+
+
+
+
+  </head>
+  <body>
+    <input type="button" id = "click_me " value="click_me"/>
+    <input type="button" id = "remove_event" value="unbind"/>
+    <input type="button" id = "trigger_event" value="trigger"/>
+
+
+
+
+
+    <script type="text/javascript">
+
+<!-- bind, unbind  : on, off로 통합 -->
+
+//이 jquery가 적용될 객체들은 body태그 안에 있음
+//body태그가 아래에 있으므로 이 jquery가 먼저 시행되는데
+//시행되는 시점에는 적용될 객체들이 없으므로 'ready'를 해주는것.
+//여기서 ready는 이벤트 타입 중 하나임.
+      $(document).ready(function(){
+
+          $('#click_me').on('click', clickHandler());
+
+          $('#remove_event').on('click', function(e){
+            $('#click_me').off('click', clickHandler()) });
+
+           $('#trigger_event').on('click',function(e){
+              $('#click_me').trigger('click');
+             });
+
+      });
+
+      function clickHandler(e){
+        alert('thx');
+      }
+    </script>
+  </body>
+</html>
